@@ -22,7 +22,7 @@ To get started with this project, follow the steps below.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/qr-code-generator.git
+   git clone https://github.com/adityxrajj/qr-code-generator.git
    ```
 
 2. Open the `index.html` file in your browser.
