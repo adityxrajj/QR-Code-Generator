@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f6f7ff 100%, #ffffff 100%);
+    color: #2d3748;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.subtitle {
+    padding-bottom: 15px;
+    color: #718096;
+}
+
+.generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+input {
+    font-family: "Inter", sans-serif;
+    flex-grow: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px 0 0 6px;
+    color: #2d3748;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.icon-btn {
+    background-color: #667eea;
+    color: white;
+    border: none;
+    padding: 17px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0 6px 6px 0;
+}
+
+.icon-btn:hover {
+    background-color: #5a67d8;
+}
+
+#qrcode-container {
+    position: relative;
+    margin: 24px 0px 24px 0px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode-frame {
+    border-radius: 8px;
+    width: 220px;
+    height: 220px;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+
+#qrcode img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#qrcode-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #667eea;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.action-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background-color: #5a67d8;
+}
+
+.action-btn i {
+    margin-right: 0.5rem;
+}
+
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #667eea;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #qrcode-container {
+        padding: 1rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    #qrcode-frame {
+        width: 180px;
+        height: 180px;
+    }
+
+    #qrcode {
+        width: 160px;
+        height: 160px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    #notification-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+}
